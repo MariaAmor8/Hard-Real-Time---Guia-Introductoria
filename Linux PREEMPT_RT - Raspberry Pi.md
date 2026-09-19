@@ -124,21 +124,13 @@ Antes de comenzar se verificó el sistema que estaba instalado.
 A continuación, se muestran los comandos usados y su resultado. Estos comandos específicamente permitieron identificar el kernel actual, sistema operativo, número de CPUs y la arquitectura y modelo de la Raspberry Pi. 
 
 | Comando | Resultado |
-| --- | --- |
-| `uname -a` | `Linux pi 6.18.34+rpt-rpi-v7 #1 SMP Raspbian 1:6.18.34-1+rpt1 (2026-06-09) armv7l GNU/Linux` |
-| `uname -r` | `6.18.34+rpt-rpi-v7` |
-| `cat /etc/os-release` | `PRETTY_NAME="Raspbian GNU/Linux 13 (trixie)" 
-NAME="Raspbian GNU/Linux" VERSION_ID="13" 
-VERSION="13 (trixie)" 
-VERSION_CODENAME=trixie DEBIAN_VERSION_FULL=13.4` |
-| `nproc` | 4 |
-| `cat /proc/cpuinfo | grep -E 'model nam|Hardware|Revision|Model’` | `model name : ARMv7 Processor rev 5 (v7l) 
-model name : ARMv7 Processor rev 5 (v7l) 
-model name : ARMv7 Processor rev 5 (v7l) 
-model name : ARMv7 Processor rev 5 (v7l) Hardware : BCM2835 
-Revision : a01041 
-Model : Raspberry Pi 2 Model B Rev 1.1` |
-| `getconf LONG_BIT` | 32 |
+|---|---|
+| `uname -a` | <pre><code>Linux pi 6.18.34+rpt-rpi-v7 #1 SMP Raspbian 1:6.18.34-1+rpt1 (2026-06-09)<br>armv7l GNU/Linux</code></pre> |
+| `uname -r` | <pre><code>6.18.34+rpt-rpi-v7</code></pre> |
+| `cat /etc/os-release` | <pre><code>PRETTY_NAME="Raspbian GNU/Linux 13 (trixie)"<br>NAME="Raspbian GNU/Linux"<br>VERSION_ID="13"<br>VERSION="13 (trixie)"<br>VERSION_CODENAME=trixie<br>DEBIAN_VERSION_FULL=13.4</code></pre> |
+| `nproc` | <pre><code>4</code></pre> |
+| `cat /proc/cpuinfo \| grep -E 'model name\|Hardware\|Revision\|Model'` | <pre><code>model name : ARMv7 Processor rev 5 (v7l)<br>model name : ARMv7 Processor rev 5 (v7l)<br>model name : ARMv7 Processor rev 5 (v7l)<br>model name : ARMv7 Processor rev 5 (v7l)<br>Hardware : BCM2835<br>Revision : a01041<br>Model : Raspberry Pi 2 Model B Rev 1.1</code></pre> |
+| `getconf LONG_BIT` | <pre><code>32</code></pre> |
 
 Por tanto, el procedimiento se realizó específicamente para:
 
